@@ -1,6 +1,6 @@
 class Solution {
     public boolean isValid(String s) {
-        if(s.length()==1)
+      /*  if(s.length()==1)
         return false;
        else {
         Stack<Character> ok=new Stack<Character>();
@@ -35,8 +35,8 @@ class Solution {
         return true;
         else
         return false;
-    }  
- /*           Stack<Character> ok = new Stack<>();
+    }   */  
+            Stack<Character> ok = new Stack<>();
 
         for(char ch: s.toCharArray())
         {
@@ -45,22 +45,22 @@ class Solution {
                 case '(':
                 case '{':
                 case '[':
-                    stack.push(ch);
+                    ok.push(ch);
                     break;
                 case ')':
-                    if(stack.isEmpty() || stack.pop() != '(')
+                    if(ok.isEmpty() || ok.pop() != '(')
                     {
                         return false;
                     }
                     break;
                 case '}':
-                    if(stack.isEmpty() || stack.pop() != '{')
+                    if(ok.isEmpty() || ok.pop() != '{')
                     {
                         return false;
                     }
                     break;
                 case ']':
-                    if(stack.isEmpty() || stack.pop() != '[')
+                    if(ok.isEmpty() ||  ok.pop() != '[')
                     {
                         return false;
                     }
@@ -68,7 +68,7 @@ class Solution {
             }
         }
 
-        return stack.isEmpty();  */
+        return ok.isEmpty();  
 
     
     }
