@@ -13,7 +13,7 @@ class Solution {
             if(mid>0 && nums[mid-1]>nums[mid])
                 return nums[mid];
             
-            if(nums[mid]>nums[0])
+            if(nums[mid]>nums[lo])
                 lo = mid+1;
             
             else{
