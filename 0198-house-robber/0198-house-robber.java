@@ -12,8 +12,9 @@ class Solution {
         {
             cur=p+nums[i];
             p=Math.max(m,p);
-            m=cur;
             dp[i]=cur;
+            m=dp[i];
+            
         }
         
         int max1=Integer.MIN_VALUE;
